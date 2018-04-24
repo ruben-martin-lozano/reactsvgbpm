@@ -1,6 +1,38 @@
 .sb-Bpm {
   & {
     display: block;
+  }
+
+  &:hover {
+    animation-iteration-count: infinite;
+    animation-name: pulse_animation;
+    animation-timing-function: ease;
+    transform-origin: 50% 50%;
+  }
+
+  &Value {
+    font-size: 4em;
+    font-weight: bold;
     user-select: none;
+  }
+
+  &Unit {
+    font-size: 1.7em;
+    font-weight: bold;
+    user-select: none;
+  }
+
+  @keyframes pulse_animation {
+    0% {
+      transform: scale(1);
+    }
+
+    12% {
+      transform: scale(1.07);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 }

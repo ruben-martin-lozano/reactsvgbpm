@@ -4,7 +4,19 @@ import Bpm from '../src/index.jsx'
 
 const demo = (
   <Fragment>
-    <Bpm />
+    <div className='demo-Custom'>
+      <Bpm bpm={60} />
+      <Bpm bpm={120} />
+      <Bpm bpm={240} />
+    </div>
+    <div className='demo-Inverse'>
+      <Bpm bpm={60} />
+      <Bpm bpm={120} />
+      <Bpm bpm={240} />
+    </div>
+    <Bpm bpm={60} />
+    <Bpm bpm={120} />
+    <Bpm bpm={240} />
   </Fragment>
 )
 

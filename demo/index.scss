@@ -22,15 +22,7 @@ h1 {
 }
 
 .demo-Custom {
-  h1 {
-    color: $c-custom;
-  }
-
   svg {
-    line,
-    polyline {
-      stroke: $c-custom;
-    }
     fill: $c-custom;
   }
 }
@@ -38,15 +30,11 @@ h1 {
 .demo-Inverse {
   background: $c-custom;
 
-  h1 {
-    color: $c-white;
+  svg {
+    fill: $c-white;
   }
 
-  svg {
-    line,
-    polyline {
-      stroke: $c-white;
-    }
-    fill: $c-white;
+  text {
+    fill: $c-custom;
   }
 }
