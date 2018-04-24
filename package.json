@@ -1,0 +1,55 @@
+{
+  "name": "react-svg-bpm",
+  "version": "0.0.1",
+  "description": "React Svg Bpm Component",
+  "main": "dist/",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "babel src --out-dir dist",
+    "build:css": "node-sass src/index.scss dist/index.css",
+    "clean": "rimraf dist",
+    "fenix": "rimraf node_modules && npm i -s",
+    "start": "parcel demo/index.html --out-dir public --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ruben-martin-lozano@bitbucket.org/ruben-martin-lozano/reactsvgbpm.git"
+  },
+  "keywords": [],
+  "author": "Rubén Martín Lozano",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ruben-martin-lozano/reactsvgbpm#readme",
+  "peerDependencies": {
+    "react": "0.14 || 15 || 16"
+  },
+  "eslintConfig": {
+    "extends": "./eslintrc.js"
+  },
+  "sasslintConfig": ".sass-lint.yml",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-eslint": "8.2.2",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "eslint-config-standard-react": "6.0.0",
+    "eslint-config-standard": "11.0.0",
+    "eslint-plugin-chai-friendly": "0.4.1",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-node": "6.0.0",
+    "eslint-plugin-promise": "3.6.0",
+    "eslint-plugin-react": "7.7.0",
+    "eslint-plugin-standard": "3.0.1",
+    "eslint": "4.18.1",
+    "node-sass": "4.7.2",
+    "normalize.css": "8.0.0",
+    "parcel-bundler": "1.7.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "rimraf": "2.6.2",
+    "sass-lint": "1.12.1"
+  }
+}
