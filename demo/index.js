@@ -10,9 +10,9 @@ const demo = (
       <Bpm bpm={240} />
     </div>
     <div className='demo-Inverse'>
-      <Bpm bpm={60} />
-      <Bpm bpm={120} />
-      <Bpm bpm={240} />
+      <Bpm bpm={60} active />
+      <Bpm bpm={120} active />
+      <Bpm bpm={240} active />
     </div>
     <Bpm bpm={60} />
     <Bpm bpm={120} />

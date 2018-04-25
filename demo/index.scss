@@ -3,6 +3,7 @@
 
 $c-white: #ffffff;
 $c-custom: #009688;
+$c-active: #ec407a;
 
 html {
   overflow-x: hidden;
@@ -24,6 +25,10 @@ h1 {
 .demo-Custom {
   svg {
     fill: $c-custom;
+  }
+
+  .sb-Bpm--active {
+    fill: $c-active;
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "react-svg-bpm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Svg Bpm Component",
   "main": "dist/",
   "scripts": {
@@ -51,5 +51,8 @@
     "react-dom": "16.2.0",
     "rimraf": "2.6.2",
     "sass-lint": "1.12.1"
+  },
+  "dependencies": {
+    "classnames": "2.2.5"
   }
 }

@@ -1,9 +1,10 @@
 .sb-Bpm {
   & {
+    cursor: pointer;
     display: block;
   }
 
-  &:hover {
+  &--active {
     animation-iteration-count: infinite;
     animation-name: pulse_animation;
     animation-timing-function: ease;
