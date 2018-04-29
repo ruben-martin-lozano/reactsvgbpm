@@ -15,6 +15,8 @@ export default class Bpm extends Component {
     active: this.props.active && this.props.metronome
   }
 
+  counter = 0
+
   static propTypes = {
     active: PropTypes.bool,
     bpm: PropTypes.number.isRequired,
@@ -36,7 +38,6 @@ export default class Bpm extends Component {
     if (!sound) return null
 
     const {active} = this.state
-    this.counter = 0
 
     if (active) {
       const beatsInMeasure = !waltz ? 4 : 3
@@ -48,6 +49,7 @@ export default class Bpm extends Component {
         this.counter++
       }, (60 / bpm) * 1000)
     } else {
+      this.counter = 0
       window.clearInterval(this.playInterval)
     }
   }

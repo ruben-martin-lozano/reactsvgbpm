@@ -20,4 +20,10 @@ const demo = (
   </Fragment>
 )
 
-ReactDOM.render(demo, document.getElementById('demo'))
+const demo2 = (
+  <div className='demo-Custom'>
+    <Bpm bpm={90} metronome sound waltz />
+  </div>
+)
+
+ReactDOM.render(demo2, document.getElementById('demo'))
