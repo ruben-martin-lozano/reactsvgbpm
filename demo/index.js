@@ -10,13 +10,13 @@ const demo = (
       <Bpm bpm={240} />
     </div>
     <div className='demo-Inverse'>
-      <Bpm bpm={60} active />
-      <Bpm bpm={120} active />
-      <Bpm bpm={240} active />
+      <Bpm bpm={60} metronome active sound />
+      <Bpm bpm={120} metronome active />
+      <Bpm bpm={240} metronome active />
     </div>
-    <Bpm bpm={60} />
-    <Bpm bpm={120} />
-    <Bpm bpm={240} />
+    <Bpm bpm={60} metronome sound waltz />
+    <Bpm bpm={190} metronome sound />
+    <Bpm bpm={240} metronome sound />
   </Fragment>
 )
 

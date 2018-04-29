@@ -1,7 +1,10 @@
 .sb-Bpm {
   & {
-    cursor: pointer;
     display: block;
+  }
+
+  &--metronome {
+    cursor: pointer;
   }
 
   &--active {
