@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import Sound from './sound'
 
 const viewBox = {
   height: 165,
@@ -14,8 +15,6 @@ export default class Bpm extends Component {
   state = {
     active: this.props.active && this.props.metronome
   }
-
-  counter = 0
 
   static propTypes = {
     active: PropTypes.bool,
@@ -32,46 +31,20 @@ export default class Bpm extends Component {
     waltz: false
   }
 
-  play = () => {
-    const {bpm, sound, waltz} = this.props
-
-    if (!sound) return null
-
-    const {active} = this.state
-
-    if (active) {
-      const beatsInMeasure = !waltz ? 4 : 3
-      this.high.play()
-      this.counter++
-
-      this.playInterval = window.setInterval(() => {
-        this.counter % beatsInMeasure !== 0 ? this.low.play() : this.high.play()
-        this.counter++
-      }, (60 / bpm) * 1000)
-    } else {
-      this.counter = 0
-      window.clearInterval(this.playInterval)
-    }
-  }
-
   onClick = () => this.props.metronome && this.setState({
     active: !this.state.active
-  }, this.play)
-
-  componentDidMount = () => {
-    const {sound} = this.props
-
-    sound && this.state.active && this.play()
-  }
+  })
 
   render = () => {
-    const {bpm} = this.props
+    const {bpm, metronome, sound, waltz} = this.props
 
     if (!bpm) return null
 
+    const {active} = this.state
+
     const baseClassName = cx('sb-Bpm', {
-      'sb-Bpm--metronome': this.props.metronome,
-      'sb-Bpm--active': this.state.active
+      'sb-Bpm--metronome': metronome,
+      'sb-Bpm--active': active
     })
 
     return (
@@ -95,12 +68,7 @@ export default class Bpm extends Component {
             bpm
           </text>
         </svg>
-        <audio ref={node => { this.high = node }}>
-          <source src='./sounds/high.wav' type='audio/wav' />
-        </audio>
-        <audio ref={node => { this.low = node }}>
-          <source src='./sounds/low.wav' type='audio/wav' />
-        </audio>
+        {sound && <Sound active={active} bpm={bpm} waltz={waltz} />}
       </Fragment>
     )
   }
