@@ -1,6 +1,6 @@
 {
   "name": "react-svg-bpm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Svg Bpm Component",
   "main": "dist/",
   "scripts": {
