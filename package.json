@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ruben-martin-lozano@bitbucket.org/ruben-martin-lozano/reactsvgbpm.git"
+    "url": "git+https://github.com/ruben-martin-lozano/reactsvgbpm.git"
   },
   "keywords": [],
   "author": "Rubén Martín Lozano",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ruben-martin-lozano/reactsvgbpm#readme",
+  "homepage": "https://github.com/ruben-martin-lozano/reactsvgbpm#readme",
   "peerDependencies": {
     "react": "0.14 || 15 || 16"
   },
